@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CRUD</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+	<script src="main.js"></script>	
+	<script src="demo.js"></script>
+	
+	<script src="create.js"></script>
+	<script src="edit.js"></script>
+	<script src="delete.js"></script>
+
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="header">
+		<!-- Добавить функцию автогенерации? -->
+		<nav>
+			<input type="button" id="demoDataTest" value="Заполнение демо данными таблицы заново">
+			<input type="button" id="demoDataTest2" value="Заполнение демо данными таблицы дополнительно">
+			<input type="button" id="create" value="Добавить запись в таблицу">
+			<input type="button" id="DemoDataCreate" value="Заполнение демо данными формы добавления">		
+			Число записей в таблице - <label for="" id="countersrecords">25</label> элементов
+		</nav>
+	</div>
+	
+	<div class="createheader">
+		<b>Create</b><br>
+		<div class="form1">
+			<label for="firstName">FirstName</label>
+			<input type="text" id="firstName" required>
+		</div>
+		<div class="form1">
+			<label for="lastName">lastName</label>
+			<input type="text" id="lastName" required>
+		</div>
+		<div class="form1">
+			<label for="age">Age</label>
+			<input type="text" id="age" required>
+		</div>
+		<div class="form1">
+			<label for="phoneNumbers">Phone</label>
+			<input type="text" id="phoneNumbers" required>
+		</div>
+		<div class="form1">			
+			<input type="submit" id="createRecords" value="Save">
+		</div>
+	</div>
+	<br>
+
+		<div class="editheader">
+		<b>Edit</b><br>
+		<div class="form1">
+			<label for="firstNameEdit">FirstName</label>
+			<input type="text" id="firstNameEdit" required>
+		</div>
+		<div class="form1">
+			<label for="lastNameEdit">lastName</label>
+			<input type="text" id="lastNameEdit" required>
+		</div>
+		<div class="form1">
+			<label for="ageEdit">Age</label>
+			<input type="text" id="ageEdit" required>
+		</div>
+		<div class="form1">
+			<label for="phoneNumbersEdit">Phone</label>
+			<input type="text" id="phoneNumbersEdit" required>
+		</div>
+		<div class="form1">			
+			<input type="submit" id="editRecords" value="Save edited">
+		</div>
+	</div>
+	<br>
+<main>
+	<table>
+		<tr>
+			<th>Number</th>
+			<th>FirstName</th>
+			<th>lastName</th>
+			<th>Age</th>
+			<th>Phone</th>		
+			<th>Edit</th>	
+			<th>Delete</th>		
+		</tr>
+		<tbody id="table">
+			<tr>
+				<td>Kate</td>
+				<td></td>
+				<td>23</td>
+				<td></td>
+				<td><button id="1" onclick="deleteValue(this.id)"></button></td>				
+				<!-- <td><input type="button" id="delete" value="deleteValue"></td> -->
+				<td></td>
+			</tr>
+			<tr>
+				<td>Olga</td>
+				<td></td>
+				<td>26</td>
+				<td></td>
+				<td><button id="2" onclick="deleteValue(this.id)">Delete</button></td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+</main>
+
+<script>
+
+document.getElementById('demoDataTest').addEventListener('click', demoSaveOnLocalStorage, false);
+document.getElementById('demoDataTest2').addEventListener('click', demodataGenerationAndSaveOnLocalStorage, false);
+document.getElementById('createRecords').addEventListener('click', createRecords, false);
+document.getElementById('editRecords').addEventListener('click', editRecords, false);
+document.getElementById('create').addEventListener('click', toggleCreateForm, false);
+document.getElementById('DemoDataCreate').addEventListener('click', DemoDataCreate, false);
+
+</script>
+
+</body>
+</html>
