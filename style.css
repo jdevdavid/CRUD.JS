@@ -5,6 +5,16 @@ body{
 	margin: 0;
   background: #F5E9D9;
 }
+/*Шапка*/
+header{
+  position: sticky;   /* Липкое позиционирование */
+  top: 0;    /* Положение сверху */
+  margin: 10px;
+  background-color: #D3C9BB;
+  border: grey solid 2px;
+  padding: 10px;
+  z-index: 2;
+}
 /*Таблица*/
 table {
   font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
@@ -37,9 +47,9 @@ tr:nth-child(2n) {
   background: #EDFFFF;
 }
 
-.header{
-	/*display: inline-block;*/
-}
+/*header > label{
+  margin:3px;
+}*/
 nav > input[type=button], input[type=submit], input[type=reset] {
   background-color: #EDFFFF;
   border: none;
@@ -48,6 +58,16 @@ nav > input[type=button], input[type=submit], input[type=reset] {
   text-decoration: none;
   margin: 4px 2px;
   cursor: pointer;
+}
+.form1 > button, .form1 > input[type=button], td > button{
+  background-color: #EDFFFF;
+  border: none;
+  color: #6678B1;
+  padding: 6px 12px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-block: inherit;
 }
 td > button{
   background-color: #EDFFFF;
@@ -59,18 +79,45 @@ td > button{
   cursor: pointer;
   border-block: inherit;
 }
-
+input[type=button]:hover, input[type=submit]:hover{
+  background-color: #6678B1;
+  color: #EDFFFF;
+}
+ td > button:hover{
+  background-color: #6678B1;
+  color: #EDFFFF;
+}
 .editheader{
-	display: none;
-	margin: 10px;
-
+  display: none;
+  margin: 10px;
+  border: grey solid 2px;
+  padding: 10px;
 }
 .createheader{
   display: none;
   margin: 10px;
+  border: grey solid 2px;
+  padding: 10px;
 }
 .form1{
- 	display: inline-block;
+  display: inline-block;
 }
 
-/*Форма*/
+.contain_filter{
+  display: flex;
+  flex-direction: row;
+  margin-top: 5px;
+}
+
+.contain_filter > #div_countersrecordsfilter{
+  display: none;
+}
+
+/*Для сортировки таблицы*/
+th.sorted[data-order="-1"]::after {
+  content: "▼"
+}
+
+th.sorted[data-order="1"]::after {
+  content: "▲"
+}
