@@ -5,7 +5,7 @@ console.log('Start demo.js');
 	function demoSaveOnLocalStorage (){
 	console.log('start saveOnLocalStorage');
 
-	let StringArray = [{		   
+	let StringArray = [{
 		   "firstName": "Иван",
 		   "lastName": "Иванов",
 		   "age": "23",
@@ -18,8 +18,8 @@ console.log('Start demo.js');
 		},{
 		   "firstName": "Света",
 		   "lastName": "Соколова",
-		   "age": "18",
-		   "phoneNumbers": "696969"
+		   "age": "38",
+		   "phoneNumbers": "989898"
 		}];
 	
 	localStorage.setItem('items1', JSON.stringify(StringArray));
