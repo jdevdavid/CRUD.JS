@@ -8,19 +8,12 @@
   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
   crossorigin="anonymous"></script>
 
-	<script src="js/main.js"></script>	
-	<script src="js/demo.js"></script>
 
-	<script src="js/create.js"></script>
-	<script src="js/edit.js"></script>
-	<script src="js/delete.js"></script>
-	<script src="js/filter.js"></script>
-	<script src="js/sorting.js"></script>	
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
 	<header class="header">
-		<!-- Добавить функцию автогенерации? -->
+			
 		<nav>		
 			<a href="Readme.html">Readme</a>
 			<input type="button" id="demoDataTest" value="Заполнение демо данными заново">
@@ -90,11 +83,9 @@
 			</div>
 		</div>
 	</header>
-	
-
 	<br>
-<main>
 
+<main>
 	<table class="table_sort">
 		<thead>
 			<tr>
@@ -114,8 +105,7 @@
 				<td>Kate</td>
 				<td>Frolova</td>
 				<td>23</td>
-				<td>1771</td>
-				<!-- <td><input type="button" id="delete" value="deleteValue"></td> -->
+				<td>1771</td>				
 				<td></td>
 				<td><button id="1" onclick="deleteValue(this.id)">Delete</button></td>
 			</tr>
@@ -132,10 +122,18 @@
 	</table>
 </main>
 
+	<script src="js/main.js"></script>	
+	<script src="js/demo.js"></script>
+
+	<script src="js/create.js"></script>
+	<script src="js/edit.js"></script>
+	<script src="js/delete.js"></script>
+	<script src="js/filter.js"></script>
+	<script src="js/sorting.js"></script>	
 <script>
 document.getElementById('demoDataTest').addEventListener('click', demoSaveOnLocalStorage, false);
 document.getElementById('demoDataTest2').addEventListener('click', demodataGenerationAndSaveOnLocalStorage, false);
-// document.getElementById('createRecords').addEventListener('click', createRecords, false);
+
 document.getElementById('createRecords').addEventListener('click', checkingCreate, false);
 document.getElementById('editRecords').addEventListener('click', editRecords, false);
 document.getElementById('create').addEventListener('click', toggleCreateForm, false);
