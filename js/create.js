@@ -30,72 +30,29 @@ function checkingCreate(){
 	if (document.getElementById("phoneNumbers").value.length > 15) {
 		alert("Телефон не может быть таким длинным.");
 	}else{
-		createRecords2();
+		createRecords();
 	}
 
 	return true;
 } 
-function createRecords2(){
-	//Имя Фамилия Возраст Телефон			
-		let input = [{
-			// "id": readItemsLength(),
-			"firstName": document.getElementById("firstName").value,
-			"lastName": document.getElementById("lastName").value,
-			"age": document.getElementById("age").value,
-			"phoneNumbers": document.getElementById("phoneNumbers").value
-			}];
-
-		StringArray.push(input[0]);
-		localStorage.setItem('items1', JSON.stringify(StringArray));
-
-		readAll();//Считывание уже записанных новых данных
-}
-
-// Запись данных в хранилище
 function createRecords(){
 	console.log("start createRecords");
-	// var cl = document.getElementById("table");
-	// let StringArrayAll = [];
-	let StringArray = JSON.parse(localStorage.getItem('items1'));
-	// console.log(StringArray);
-	if (document.getElementById("firstName").value.length > 18) {
-		alert("Имя не может быть настолько длинным.");
-	}else
-	if (document.getElementById("firstName").value.length < 2) {
-		alert("Имя не может быть настолько коротким.");
-	}else
-	if (document.getElementById("lastName").value.length > 25) {
-		alert("Фамилия не может быть настолько длинной.");
-	}else
-	if (document.getElementById("lastName").value.length < 2) {
-		alert("Фамилия не может быть настолько короткой.");
-	}else
-	if (document.getElementById("age").value < 0) {
-		alert("Возраст не может быть отрицательным.");
-	}else
-	if (document.getElementById("age").value > 150) {
-		alert("Возраст не может быть таким большим.");
-	}else
-	if (document.getElementById("phoneNumbers").value < 5) {
-		alert("Телефон не может быть таким коротким.");
-	}else
-	if (document.getElementById("phoneNumbers").value > 15) {
-		alert("Телефон не может быть таким длинным.");
-	}else{
-		//Имя Фамилия Возраст Телефон			
-		let input = [{
-			// "id": readItemsLength(),
-			"firstName": document.getElementById("firstName").value,
-			"lastName": document.getElementById("lastName").value,
-			"age": document.getElementById("age").value,
-			"phoneNumbers": document.getElementById("phoneNumbers").value
-			}];
+	let StringArray = JSON.parse(localStorage.getItem('items1'));	
+	
+	//Имя Фамилия Возраст Телефон			
+	let input = [{
+		// "id": readItemsLength(),
+		"firstName": document.getElementById("firstName").value,
+		"lastName": document.getElementById("lastName").value,
+		"age": document.getElementById("age").value,
+		"phoneNumbers": document.getElementById("phoneNumbers").value
+		}];
 
 		StringArray.push(input[0]);
 		localStorage.setItem('items1', JSON.stringify(StringArray));
 
 		readAll();//Считывание уже записанных новых данных
-	}
+		filter();//Запускаем фильтрацию на всякий пожарный
 }
 
 function DemoDataCreate(){

@@ -12,13 +12,14 @@ function filter(){
 	let table = document.getElementById("table");
 	let count = document.getElementById("countersrecordsfilter");
 	let buff = "";
-	let countersrecordsfilter=0;
+	let countersrecordsfilter = 0;
 
 // Если выбор диапазона возрастов от и до
 	if(fl_max > 0){
 		console.log("Диапазон возрастов");
+		let StringArrayLen = StringArray.length;
 
-		for(let i=0; i < StringArray.length;i++){
+		for(let i=0; i < StringArrayLen; i++){
 			let a = StringArray[i];			
 		
 			if ((fl_min <= a.age)&&(a.age <= fl_max)){
@@ -40,8 +41,9 @@ function filter(){
 	}	else if(fl_min > 0){
 		console.log("Один возраст"); 
 
+		let StringArrayLen = StringArray.length;
 
-		for(let i=0; i < StringArray.length;i++){
+		for(let i=0; i < StringArrayLen; i++){
 			let a = StringArray[i];
 					
 			if (fl_min === a.age){

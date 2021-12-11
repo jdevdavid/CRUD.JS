@@ -27,16 +27,21 @@ console.log('Start demo.js');
 }
 
 function demodataGenerationAndSaveOnLocalStorage(){
+	try{
+		demodataGenerationAndSaveOnLocalStorageWithOutTry();		
+	}catch{
+		alert('Кажется возникла ошибка - попробуйте нажать еще раз');
+		alert(e.message + ' ' + e.name + ' ' + e.fileName);
+		console.log(e);
+	}
+}
+
+function demodataGenerationAndSaveOnLocalStorageWithOutTry(){
 	console.log("start demodataGenerationAndSaveOnLocalStorage");
 	let firstName, lastName, age, phoneNumbers;
 	let StringArray = JSON.parse(localStorage.getItem('items1'));
 
-		// firstName.value = 
-		// lastName.value = 
-		// age.value = 
-		// phoneNumbers.value = 
-
-	for (var i = 0; i <= 1000; i++) {
+	for (var i = 0; i <= 100; i++) {
 		
 		let input = [{			
 			"firstName": generateName(),

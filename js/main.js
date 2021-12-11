@@ -1,10 +1,11 @@
+'use strict';
 console.log('Start main.js');
 let gloval_counter_id = 0;
 
 //запускаем программу
 document.addEventListener('DOMContentLoaded', function(){ // Аналог $(document).ready(function(){
   // Если должен быть найден один элемент
-  readAll();//Грузим таблицу
+  readAll();//Грузим таблицу  
 });
 // Считаем количество записей
 function countersrecords(){
@@ -12,15 +13,24 @@ function countersrecords(){
 	document.getElementById("countersrecords").innerHTML = StringArray.length;
 }
 
-//Функция чтения всех данных и вывода в ввиде таблицы
 function readAll(){
+	try{
+		readAllWithOutTry();		
+	}catch{
+		alert(e.message);
+	}	
+}
+
+//Функция чтения всех данных и вывода в ввиде таблицы
+function readAllWithOutTry(){
 	console.log("start readAll");
 
 	let StringArray = JSON.parse(localStorage.getItem('items1'));
 	let table = document.getElementById("table");
 	let buff = "";
-	
-	for(let i=0; i < StringArray.length;i++){
+	let StringArrayLen = StringArray.length;
+
+	for(let i=0; i < StringArrayLen; i++){
 		let a = StringArray[i];
 		
 			buff +='<tr><td>'+ i +'</td><td id="'+ i +'">'+ a.firstName

@@ -1,18 +1,14 @@
 
 function editValue(clicked_id){
 	console.log("start editValue");
+
 	let StringArray = JSON.parse(localStorage.getItem('items1'));	
-	console.log(StringArray[clicked_id]);
+	// console.log(StringArray[clicked_id]);
 	document.getElementById("firstNameEdit").value = StringArray[clicked_id].firstName;
 	document.getElementById("lastNameEdit").value = StringArray[clicked_id].lastName;
 	document.getElementById("ageEdit").value = StringArray[clicked_id].age;
 	document.getElementById("phoneNumbersEdit").value = StringArray[clicked_id].phoneNumbers;
-	// document.getElementById("editRecords").
 	gloval_counter_id = clicked_id;
-	
-	// object.displayB = function() {
-	//  object.counter_id = clicked_id;
-	// };	
 
 	$('.editheader').show();
 }
@@ -20,7 +16,7 @@ function editValue(clicked_id){
 function editRecords(){
 	console.log("start editRecords");
 	let StringArray = JSON.parse(localStorage.getItem('items1'));	
-	// let count = 0;
+
 	if (document.getElementById("firstNameEdit").value.length > 18) {
 		alert("Имя не может быть настолько длинным.");
 	}else
@@ -39,10 +35,10 @@ function editRecords(){
 	if (document.getElementById("ageEdit").value > 150) {
 		alert("Возраст не может быть таким большим.");
 	}else
-	if (document.getElementById("phoneNumbersEdit").value < 5) {
+	if (document.getElementById("phoneNumbersEdit").value.length < 5) {
 		alert("Телефон не может быть таким коротким.");
 	}else
-	if (document.getElementById("phoneNumbersEdit").value > 15) {
+	if (document.getElementById("phoneNumbersEdit").value.length > 15) {
 		alert("Телефон не может быть таким длинным.");
 	}else{
 
@@ -53,22 +49,12 @@ function editRecords(){
 			"phoneNumbers": document.getElementById("phoneNumbersEdit").value
 			}];
 		
-		// object.displayB = function() {
-		//  count = object.counter_id;
-		// };	
-			// console.log(count);
-
 		StringArray[gloval_counter_id] = input[0];
 		localStorage.setItem('items1', JSON.stringify(StringArray));
 		gloval_counter_id = 0;
 
 		readAll();//Считывание уже записанных новых данных
+		filter();//Запускаем фильтр на всякий пожарный
 		$('.editheader').toggle();
 	}
 }
-
-
-
-// object.displayB = function() {
-//  console.log(object.b);
-// };
