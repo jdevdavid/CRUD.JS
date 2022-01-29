@@ -37,8 +37,8 @@ function readAllWithOutTry(){
 			+'</td><td>'+ a.lastName
 			+'</td><td>'+ a.age
 			+'</td><td>'+ a.phoneNumbers 
-			+'</td><td><button id="'+i+'" onclick="deleteValue(this.id)">Delete</button>'
-			+'</td><td><button id="'+i+'" onclick="editValue(this.id)">Edit</button></td></tr>';
+			+'</td><td><button id="'+i+'" onclick="editValue(this.id)">Edit</button>'
+			+'</td><td><button id="'+i+'" onclick="deleteValue(this.id)">Delete</button></td></tr>';
 	}
 	table.innerHTML = buff;
 	countersrecords();
