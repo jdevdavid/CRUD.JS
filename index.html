@@ -8,7 +8,6 @@
   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
   crossorigin="anonymous"></script>
 
-
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,21 +15,20 @@
 			
 		<nav>		
 			<a href="Readme.html">Readme</a>
-			<input type="button" id="demoDataTest" value="Заполнение демо данными заново">
-			<input type="button" id="demoDataTest2" value="Заполнение демо данными дополнительно">
-			<input type="button" id="create" value="Добавить запись в таблицу">			
-			<input type="button" id="clear" value="Очистить таблицу">
-			Всего записей - <label for="" id="countersrecords"></label> элементов
+			<input type="button" id="demoDataTest" value="Filling in demo data again">
+			<input type="button" id="demoDataTest2" value="Filling in demo data additionally">
+			<input type="button" id="create" value="Add record to table">			
+			<input type="button" id="clear" value="Clear table">
+			Total item records - <label for="" id="countersrecords"></label>
 
 			<br>
-			<!-- <input type="button" id="filter" value="Фильтровать таблицу">			 -->
 				<!-- <input type="number" id="agefilter" min="0" max="1000"> -->
 				<div class="contain_filter">
 					<label for="">Min</label>
 					<input type="number" id="agefilter_min" oninput="filter()" min="0" max="1000">
 					<label for="">Max</label>
 					<input type="number" id="agefilter_max" oninput="filter()" min="0" max="1000">
-					<div id="div_countersrecordsfilter">Найдено записей - <label for="" id="countersrecordsfilter"></label> элементов</div>
+					<div id="div_countersrecordsfilter">Records found - <label for="" id="countersrecordsfilter"></label> </div>
 				</div>
 				<!-- <input type="button" id="nofilter" value="Без фильтров">			 -->
 		</nav>
@@ -53,7 +51,7 @@
 			<input type="text" id="phoneNumbers" required>
 		</div>
 		<div class="form1">			
-			<input type="button" id="DemoDataCreate" value="Заполнение демо данными формы добавления">		
+			<input type="button" id="DemoDataCreate" value="Filling in the demo data of the add form">		
 		</div>
 		<div class="form1">			
 			<input type="submit" id="createRecords" value="Save">
@@ -99,7 +97,6 @@
 			</tr>
 	  </thead>
 		<tbody id="table">
-			<!-- <center>Данные отсутствуют</center> -->
 			<tr>
 				<td>1</td>
 				<td>Kate</td>
@@ -130,6 +127,7 @@
 	<script src="js/delete.js"></script>
 	<script src="js/filter.js"></script>
 	<script src="js/sorting.js"></script>	
+
 <script>
 document.getElementById('demoDataTest').addEventListener('click', demoSaveOnLocalStorage, false);
 document.getElementById('demoDataTest2').addEventListener('click', demodataGenerationAndSaveOnLocalStorage, false);
