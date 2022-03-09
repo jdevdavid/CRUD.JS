@@ -1,4 +1,3 @@
-console.log('Start filter.js');
 document.addEventListener('DOMContentLoaded', () => {
 		try{
 			sorting();

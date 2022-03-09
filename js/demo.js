@@ -6,18 +6,18 @@ console.log('Start demo.js');
 	console.log('start saveOnLocalStorage');
 
 	let StringArray = [{
-		   "firstName": "Иван",
-		   "lastName": "Иванов",
+		   "firstName": "John",
+		   "lastName": "Gold",
 		   "age": "23",
 		   "phoneNumbers": "8121231234"
 		},{
-		   "firstName": "Колян",
-		   "lastName": "Соколов",
+		   "firstName": "Ivan",
+		   "lastName": "Frolov",
 		   "age": "25",
 		   "phoneNumbers": ""
 		},{
-		   "firstName": "Света",
-		   "lastName": "Соколова",
+		   "firstName": "Jacky",
+		   "lastName": "Chan",
 		   "age": "38",
 		   "phoneNumbers": "989898"
 		}];
@@ -30,7 +30,7 @@ function demodataGenerationAndSaveOnLocalStorage(){
 	try{
 		demodataGenerationAndSaveOnLocalStorageWithOutTry();		
 	}catch{
-		alert('Кажется возникла ошибка - попробуйте нажать еще раз');
+		alert('There seems to be an error - please try again');
 		alert(e.message + ' ' + e.name + ' ' + e.fileName);
 		console.log(e);
 	}

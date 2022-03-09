@@ -1,6 +1,6 @@
 console.log("start delete.js");
 
-//Удаляем данных из таблицы
+//Removing data from a table
 function deleteValue(clicked_id){
 	console.log("start deleteValue");
 
@@ -13,7 +13,7 @@ function deleteValue(clicked_id){
   	filter();
 }
 
-// Удаление таблицы - Сделано
+// Delete table
 function cleartable(){
 	console.log("start cleartable");	
 

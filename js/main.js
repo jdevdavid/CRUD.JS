@@ -2,12 +2,12 @@
 console.log('Start main.js');
 let gloval_counter_id = 0;
 
-//запускаем программу
-document.addEventListener('DOMContentLoaded', function(){ // Аналог $(document).ready(function(){
-  // Если должен быть найден один элемент
-  readAll();//Грузим таблицу  
+//run the program
+document.addEventListener('DOMContentLoaded', function(){ // Analog $(document).ready(function(){
+  // If one element must be found
+  readAll();//load table  
 });
-// Считаем количество записей
+// How much records
 function countersrecords(){
 	let StringArray = JSON.parse(localStorage.getItem('items1'));
 	document.getElementById("countersrecords").innerHTML = StringArray.length;
@@ -21,7 +21,7 @@ function readAll(){
 	}	
 }
 
-//Функция чтения всех данных и вывода в ввиде таблицы
+//The function of reading all data and output in a table
 function readAllWithOutTry(){
 	console.log("start readAll");
 

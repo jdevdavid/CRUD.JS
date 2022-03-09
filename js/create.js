@@ -7,28 +7,36 @@ function toggleCreateForm(){
 function checkingCreate(){
 	let ret;
 	if (document.getElementById("firstName").value.length > 18) {
-		alert("Имя не может быть настолько длинным.");
+		console.log('Имя не может быть настолько длинным');
+		alert("Name can't be that long.");
 	}else
 	if (document.getElementById("firstName").value.length < 2) {
-		alert("Имя не может быть настолько коротким.");
+		console.log(Имя не может быть настолько коротким);
+		alert("Name can't be that short.");
 	}else
 	if (document.getElementById("lastName").value.length > 25) {
-		alert("Фамилия не может быть настолько длинной.");
+		// Фамилия не может быть настолько длинной
+		alert("Last name can't be that long.");
 	}else
 	if (document.getElementById("lastName").value.length < 2) {
-		alert("Фамилия не может быть настолько короткой.");
+		// Фамилия не может быть настолько короткой
+		alert("Last name can't be that short.");
 	}else
 	if (document.getElementById("age").value < 0) {
-		alert("Возраст не может быть отрицательным.");
+		// Возраст не может быть отрицательным
+		alert("Age cannot be negative.");
 	}else
 	if (document.getElementById("age").value > 150) {
-		alert("Возраст не может быть таким большим.");
+		// Возраст не может быть таким большим
+		alert("Age can't be that big.");
 	}else
 	if (document.getElementById("phoneNumbers").value.length < 5) {
-		alert("Телефон не может быть таким коротким.");
+		// Телефон не может быть таким коротким
+		alert("The phone can't be that short.");
 	}else
 	if (document.getElementById("phoneNumbers").value.length > 15) {
-		alert("Телефон не может быть таким длинным.");
+		// Телефон не может быть таким длинным
+		alert("The phone can't be that long.");
 	}else{
 		createRecords();
 	}

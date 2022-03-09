@@ -16,7 +16,6 @@ function filter(){
 
 // Если выбор диапазона возрастов от и до
 	if(fl_max > 0){
-		console.log("Диапазон возрастов");
 		let StringArrayLen = StringArray.length;
 
 		for(let i=0; i < StringArrayLen; i++){
@@ -39,7 +38,6 @@ function filter(){
 		$('#div_countersrecordsfilter').show();
 		count.innerHTML = countersrecordsfilter;
 	}	else if(fl_min > 0){
-		console.log("Один возраст"); 
 
 		let StringArrayLen = StringArray.length;
 
