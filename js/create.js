@@ -11,7 +11,7 @@ function checkingCreate(){
 		alert("Name can't be that long.");
 	}else
 	if (document.getElementById("firstName").value.length < 2) {
-		console.log(Имя не может быть настолько коротким);
+		console.log('Имя не может быть настолько коротким');
 		alert("Name can't be that short.");
 	}else
 	if (document.getElementById("lastName").value.length > 25) {
