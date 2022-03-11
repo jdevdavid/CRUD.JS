@@ -1,0 +1,45 @@
+@import url("desktop.css") screen and (orientation:landscape); 
+@import url("smart.css")(orientation:portrait);
+/* (min-width:481px) and (max-width:768px) and */
+ /* импортируем содержимое файла css, который предназначается для устройств с разрешением экрана, находящегося в диапозоне от 481 пикселей до 768 пикселей */
+
+* {
+   box-sizing: border-box;
+}
+body{
+	margin: 0;
+  background: #6678C2;
+}
+
+input[type=button]:hover, input[type=submit]:hover{
+  background-color: #6678B1;
+  color: #EDFFFF;
+}
+ td > button:hover{
+  background-color: #6678B1;
+  color: #EDFFFF;
+}
+
+/*Для сортировки таблицы*/
+th.sorted[data-order="-1"]::after {
+  content: "▼"
+}
+
+th.sorted[data-order="1"]::after {
+  content: "▲"
+}
+
+.form1{
+  display: inline-block;
+}
+
+.header_toggle{
+	background-color: #E8EDFF;
+  width: 65px;
+  height: 25px;
+  /*height: 4vh;*/
+  /*margin-top: 5px;*/
+  margin-left: 15px;
+  z-index: 3;
+  position: fixed;
+}
