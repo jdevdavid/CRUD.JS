@@ -10,16 +10,6 @@ console.log('Start demo.js');
 		   "lastName": "Gold",
 		   "age": "23",
 		   "phoneNumbers": "8121231234"
-		},{
-		   "firstName": "Ivan",
-		   "lastName": "Frolov",
-		   "age": "25",
-		   "phoneNumbers": ""
-		},{
-		   "firstName": "Jacky",
-		   "lastName": "Chan",
-		   "age": "38",
-		   "phoneNumbers": "989898"
 		}];
 	
 	localStorage.setItem('items1', JSON.stringify(StringArray));
@@ -27,6 +17,15 @@ console.log('Start demo.js');
 }
 
 function demodataGenerationAndSaveOnLocalStorage(){
+		let StringArray = [{
+		   "firstName": "John",
+		   "lastName": "Gold",
+		   "age": "23",
+		   "phoneNumbers": "8121231234"
+		}];
+	
+	localStorage.setItem('items1', JSON.stringify(StringArray));
+
 	try{
 		demodataGenerationAndSaveOnLocalStorageWithOutTry();		
 	}catch{

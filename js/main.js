@@ -6,6 +6,10 @@ let gloval_counter_id = 0;
 document.addEventListener('DOMContentLoaded', function(){ // Analog $(document).ready(function(){
   // If one element must be found
   readAll();//load table  
+   $('.header_toggle').click(function(){
+        $(this).siblings('.header').slideToggle(300);
+        // $('.header_toggle').value('');
+    })
 });
 // How much records
 function countersrecords(){
@@ -37,8 +41,10 @@ function readAllWithOutTry(){
 			+'</td><td>'+ a.lastName
 			+'</td><td>'+ a.age
 			+'</td><td>'+ a.phoneNumbers 
-			+'</td><td><button id="'+i+'" onclick="editValue(this.id)">Edit</button>'
-			+'</td><td><button id="'+i+'" onclick="deleteValue(this.id)">Delete</button></td></tr>';
+			// +'</td><td><button id="'+i+'" onclick="editValue(this.id)">Edit</button>'
+			// +'</td><td><button id="'+i+'" onclick="deleteValue(this.id)">Delete</button></td></tr>';
+			+'</td><td><button class="edit-button" id="'+i+'" onclick="editValue(this.id)"></button>'
+			+'</td><td><button class="delete-button" id="'+i+'" onclick="deleteValue(this.id)"></button></td></tr>';
 	}
 	table.innerHTML = buff;
 	countersrecords();
