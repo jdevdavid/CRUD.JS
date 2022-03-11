@@ -8,114 +8,113 @@
   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
   crossorigin="anonymous"></script>
 
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="css/import.css">
 </head>
 <body>
-	<header class="header">
-			
-		<nav>		
-			Readme <a href="ReadmeRu.html">Ru</a>/
-			<a href="ReadmeEn.html">Eng</a>
-			<input type="button" id="demoDataTest" value="Filling in demo data again">
-			<input type="button" id="demoDataTest2" value="Filling in demo data additionally">
-			<input type="button" id="create" value="Add record to table">			
-			<input type="button" id="clear" value="Clear table">
-			Total item records - <label for="" id="countersrecords"></label>
+		<header class="header">	
+			<nav>		
+				Readme <a href="ReadmeRu.html">Ru</a>/
+				<a href="ReadmeEn.html">Eng</a> 
+				<br>Total item records - <label for="" id="countersrecords"></label>
+				<br>Filling in demo data - 
+				<input type="button" id="demoDataTest" value="New table">
+				<input type="button" id="demoDataTest2" value="New + demo">
+				<br>
+				<input type="button" id="create" value="Add record">			
+				<input type="button" id="clear" value="Delete table">
+
+				<br>
+					<!-- <input type="number" id="agefilter" min="0" max="1000"> -->
+					<div class="contain_filter">
+						<b>Age filter</b>
+						<label for="">Min</label>
+						<input type="number" id="agefilter_min" oninput="filter()" min="0" max="1000">
+						<label for="">Max</label>
+						<input type="number" id="agefilter_max" oninput="filter()" min="0" max="1000">
+						<div id="div_countersrecordsfilter">Records found - <label for="" id="countersrecordsfilter"></label> </div>
+					</div>
+					<!-- <input type="button" id="nofilter" value="Без фильтров">			 -->
+			</nav>
 
 			<br>
-				<!-- <input type="number" id="agefilter" min="0" max="1000"> -->
-				<div class="contain_filter">
-					<label for="">Min</label>
-					<input type="number" id="agefilter_min" oninput="filter()" min="0" max="1000">
-					<label for="">Max</label>
-					<input type="number" id="agefilter_max" oninput="filter()" min="0" max="1000">
-					<div id="div_countersrecordsfilter">Records found - <label for="" id="countersrecordsfilter"></label> </div>
-				</div>
-				<!-- <input type="button" id="nofilter" value="Без фильтров">			 -->
-		</nav>
-	<div class="createheader">
-		<b>Create</b><br>
-		<div class="form1">
-			<label for="firstName">FirstName</label>
-			<input type="text" id="firstName" required>
-		</div>
-		<div class="form1">
-			<label for="lastName">lastName</label>
-			<input type="text" id="lastName" required>
-		</div>
-		<div class="form1">
-			<label for="age">Age</label>
-			<input type="text" id="age" required>
-		</div>
-		<div class="form1">
-			<label for="phoneNumbers">Phone</label>
-			<input type="text" id="phoneNumbers" required>
-		</div>
-		<div class="form1">			
-			<input type="button" id="DemoDataCreate" value="Filling in the demo data of the add form">		
-		</div>
-		<div class="form1">			
-			<input type="submit" id="createRecords" value="Save">
-		</div>
-	</div>
-	
-		<div class="editheader">
-			<b>Edit</b><br>
+
+		<div class="createheader">
+			<b>Create</b><br>
 			<div class="form1">
-				<label for="firstNameEdit">FirstName</label>
-				<input type="text" id="firstNameEdit" required>
+				<label for="firstName">FirstName</label>
+				<input type="text" id="firstName" required>
 			</div>
 			<div class="form1">
-				<label for="lastNameEdit">lastName</label>
-				<input type="text" id="lastNameEdit" required>
+				<label for="lastName">lastName</label>
+				<input type="text" id="lastName" required>
 			</div>
 			<div class="form1">
-				<label for="ageEdit">Age</label>
-				<input type="text" id="ageEdit" required>
+				<label for="age">Age</label>
+				<input type="text" id="age" required>
 			</div>
 			<div class="form1">
-				<label for="phoneNumbersEdit">Phone</label>
-				<input type="text" id="phoneNumbersEdit" required>
+				<label for="phoneNumbers">Phone</label>
+				<input type="text" id="phoneNumbers" required>
 			</div>
 			<div class="form1">			
-				<input type="submit" id="editRecords" value="Save edited">
+				<input type="button" id="DemoDataCreate" value="Filling in the demo data of the add form">		
+			</div>
+			<div class="form1">			
+				<input type="submit" id="createRecords" value="Save">
 			</div>
 		</div>
-	</header>
+		
+			<div class="editheader">
+				<b>Edit</b><br>
+				<div class="form1">
+					<label for="firstNameEdit">FirstName</label>
+					<input type="text" id="firstNameEdit" required>
+				</div>
+				<div class="form1">
+					<label for="lastNameEdit">lastName</label>
+					<input type="text" id="lastNameEdit" required>
+				</div>
+				<div class="form1">
+					<label for="ageEdit">Age</label>
+					<input type="text" id="ageEdit" required>
+				</div>
+				<div class="form1">
+					<label for="phoneNumbersEdit">Phone</label>
+					<input type="text" id="phoneNumbersEdit" required>
+				</div>
+				<div class="form1">			
+					<input type="submit" id="editRecords" value="Save edited">
+				</div>
+			</div>
+
+		</header>
+			<button class="header_toggle">&#8597;</button>
+
 	<br>
 
 <main>
 	<table class="table_sort">
 		<thead>
 			<tr>
-				<th>Number</th>
+				<th>Id</th>
 				<th>FirstName</th>
 				<th>lastName</th>
 				<th>Age</th>
 				<th>Phone</th>		
-				<th>Edit</th>	
-				<th>Delete</th>		
+				<th></th>	
+				<th></th>		
 			</tr>
 	  </thead>
 		<tbody id="table">
-			<tr>
+	<!-- 		<tr>
 				<td>1</td>
 				<td>Kate</td>
 				<td>Frolova</td>
 				<td>23</td>
 				<td>1771</td>				
-				<td></td>
-				<td><button id="1" onclick="deleteValue(this.id)">Delete</button></td>
-			</tr>
-			<tr>
-				<td>2</td>
-				<td>Olga</td>
-				<td>Kylikova</td>
-				<td>26</td>
-				<td>1324</td>
-				<td></td>
-				<td><button id="2" onclick="deleteValue(this.id)">Delete</button></td>
-			</tr>
+				<td><button class="edit-button" id="1" onclick="editValue(this.id)"></button></td>
+				<td><button class="delete-button" id="1" onclick="deleteValue(this.id)"></button></td>
+			</tr> -->
 		</tbody>
 	</table>
 </main>
@@ -128,6 +127,7 @@
 	<script src="js/delete.js"></script>
 	<script src="js/filter.js"></script>
 	<script src="js/sorting.js"></script>	
+	<script src="js/lang.js"></script>	
 
 <script>
 document.getElementById('demoDataTest').addEventListener('click', demoSaveOnLocalStorage, false);
@@ -138,6 +138,7 @@ document.getElementById('editRecords').addEventListener('click', editRecords, fa
 document.getElementById('create').addEventListener('click', toggleCreateForm, false);
 document.getElementById('DemoDataCreate').addEventListener('click', DemoDataCreate, false);
 document.getElementById('clear').addEventListener('click', cleartable, false);
+// document.getElementById('header_toggle').addEventListener('click', header_toggle, false);
 
 // document.getElementById('filter').addEventListener('click', filter, false);
 // document.getElementById('nofilter').addEventListener('click', readAll, false);
